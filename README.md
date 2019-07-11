@@ -40,7 +40,7 @@
 ------------
 
 ### 项目介绍：
-####项目一共分为四个模块：
+#### 项目一共分为四个模块：
 1.    framework-common为公共模块，其他模块以jar包的形式引入进去，主要提供一些工具类，以及framework-admin、framework-api模块公共的entity、mapper、dao、service服务，防止一个功能重复多次编写代码。
 2.    framework-admin为后台模块，也是系统的核心，用来开发后台管理系统，可以打包成jar，部署到服务器上运行；或者打包成war，放到Tomcat8.5+容器运行。
 3.    framework-api 为接口模块，简化APP开发，为 微信小程序、iOS、Android提供接口，拥有一套单独的用户体系，没有与framework-admin共用用户表。因为framework-admin用户表存放的是企业内部人员账号，具有后台管理员权限，可以登录后台管理系统，而framework-api用户表存放的是真实用户，不具备登录后台管理系统的权限。framework-api主要是实现了用户注册、登录、接口权限认证、获取登录用户等功能，为APP接口的安全调用，提供一套优雅的解决方案，从而简化APP接口开发。
@@ -52,8 +52,6 @@
 1.    需要安装Redis，并配置config.properties里的redis信息。
 2.    需要配置【framework.redis.open=true】，表示开启Redis缓存。
 3.    需要配置【framework.shiro.redis=true】，表示把shiro session存到Redis里。
-
-------------
 
 ### 开发调试启动说明：
 1.    开发环境任何地方不要包含中文路径。
